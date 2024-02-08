@@ -153,15 +153,9 @@
   border-bottom: 1px solid var(--accent-color, #FF0070);
 }
 
-.header__theme-menu-button_type_light {
-}
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color, #FF0070);
   pointer-events: none;
-}
-.header__theme-menu-button_type_auto {
-}
-.header__theme-menu-button_type_dark {
 }
 
 .header__title {
@@ -202,7 +196,7 @@
 
 @media (width >= 1024px) { 
   .header__title {
-    margin-block-start: 279px;
+    margin-block-start: 273px;
     margin-block-end: 114px;
   }
 }
@@ -251,7 +245,6 @@
   gap: 20px;
 }
 
-
 @media (width >= 768px) {
   .content {
     padding: 0 20px;
@@ -260,9 +253,6 @@
 
   .content__reasons {
     display: grid;
-    /*
-    grid-template-rows: repeat(2, 50%); - без этого работает корректно...не понимаю
-    */
     grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
@@ -421,6 +411,38 @@
   
   .content__tips-reading {
     grid-area: 5 / 2 / 6 / 3;
+  }
+}
+
+@media (width >= 1024px) {
+  .content__tips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .content__title-tips {
+    grid-area: 1 / 1 / 6 / 2;
+  }
+
+  .content__tips-imagination {
+    grid-area: 1 / 2 / 2 / 4;
+  }
+  
+  .content__tips-music {
+    grid-area: 2 / 2 / 3 / 4;
+  }
+  
+  .content__tips-walking {
+    grid-area: 3 / 2 / 4 / 4;
+  }
+  
+  .content__tips-food {
+    grid-area: 4 / 2 / 5 / 4;
+  }
+  
+  .content__tips-reading {
+    grid-area: 5 / 2 / 6 / 4;
   }
 }
 
