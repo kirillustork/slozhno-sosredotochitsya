@@ -11,16 +11,3 @@
   --title-color: #DB00FF;
 }
 
-.theme_dark .header {
-  background-image: url(/images/cover-image-dark.png);
-  background-size: cover;
-  background-position: center;
-}
-
-@media (prefers-color-scheme: dark) {
-  .theme_auto .header {
-    background-image: url(/images/cover-image-dark.png);
-    background-size: cover;
-    background-position: center;
-  }
-}

@@ -9,6 +9,7 @@
   --accent-color: #FF8DCB;
   --background-color: #FFF1F7;
   --title-color: #FFC2E6;
+  --background-image: url(./images/cover-image-light.png);
 }
 
 @media (prefers-color-scheme: light) {
@@ -17,10 +18,7 @@
     --accent-color: #FF8DCB;
     --background-color: #FFF1F7;
     --title-color: #FFC2E6;  
-    }
-
-    .theme_auto .header {
-      background-image: none;
+    --background-image: url(./images/cover-image-light.png);
     }
     
     .theme_auto .header__theme-menu-button {
@@ -65,9 +63,6 @@
     
 }
 
-.theme_light .header {
-  background-image: none;
-}
 
 .theme_light .header__theme-menu-button {
   color: var(--font-color, #353430);

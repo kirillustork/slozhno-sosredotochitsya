@@ -3,9 +3,13 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   color: var(--font-color, #F1B2CE);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font), sans-serif; /* Поправил, но, честно говоря, не понял, почему для шрифта, указанного через переменную, фолбек выносится за скобки?? */
   background-color: var(--background-color, #000028);
   font-size: var(--main-font-size, 18px);
+  background-image: var(--background-image);
+  background-size: auto 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .header {
@@ -16,6 +20,7 @@
 }
 
 .decorated-zone {
+  block-size: 100vh;
   min-block-size: 668px;
   padding: 10px;
 }
@@ -206,6 +211,7 @@
   width: 100%;
   margin-block-end: 10px;
   color: var(--background-color, #000028);
+  font-size: inherit;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px;
@@ -375,7 +381,7 @@
 }
 
 .content__tips-subtitle {
-  margin-block-end: 20px;
+  margin-block-end: 0;
 }
 
 .content__topic-name {
@@ -393,24 +399,28 @@
     grid-area: 1 / 1 / 6 / 2;
   }
 
-  .content__tips-imagination {
+  .content__tips-subtitle {
     grid-area: 1 / 2 / 2 / 3;
   }
-  
-  .content__tips-music {
+
+  .content__tips-imagination {
     grid-area: 2 / 2 / 3 / 3;
   }
   
-  .content__tips-walking {
+  .content__tips-music {
     grid-area: 3 / 2 / 4 / 3;
   }
   
-  .content__tips-food {
+  .content__tips-walking {
     grid-area: 4 / 2 / 5 / 3;
   }
   
-  .content__tips-reading {
+  .content__tips-food {
     grid-area: 5 / 2 / 6 / 3;
+  }
+  
+  .content__tips-reading {
+    grid-area: 6 / 2 / 7 / 3;
   }
 }
 
@@ -425,25 +435,35 @@
     grid-area: 1 / 1 / 6 / 2;
   }
 
-  .content__tips-imagination {
+  .content__tips-subtitle {
     grid-area: 1 / 2 / 2 / 4;
   }
-  
-  .content__tips-music {
+
+  .content__tips-imagination {
     grid-area: 2 / 2 / 3 / 4;
   }
   
-  .content__tips-walking {
+  .content__tips-music {
     grid-area: 3 / 2 / 4 / 4;
   }
   
-  .content__tips-food {
+  .content__tips-walking {
     grid-area: 4 / 2 / 5 / 4;
   }
   
-  .content__tips-reading {
+  .content__tips-food {
     grid-area: 5 / 2 / 6 / 4;
   }
+  
+  .content__tips-reading {
+    grid-area: 6 / 2 / 7 / 4;
+  }
+}
+
+.content__illustrations {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .content__images-list {
@@ -453,13 +473,21 @@
 }
 
 .content__image-item img{
-  max-width: 100%;
+  width: 100%;
 }
 
 @media (width >= 768px) {
 
+  /*
   .content__tips-subtitle {
     margin-block-end: 20px;
+  }
+  */
+
+  .content__illustrations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .content__images-list {
